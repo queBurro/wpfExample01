@@ -6,7 +6,7 @@
              xmlns:ViewModel="clr-namespace:MinimalMVVM.ViewModel" mc:Ignorable="d" 
              d:DesignHeight="336"
              d:DesignWidth="300"
-             d:DataContext="{d:DesignInstance ViewModel:Presenter}">
+             d:DataContext="{d:DesignInstance ViewModel:VmPresenter}">
 
     <UserControl.InputBindings>
         <KeyBinding Key="Enter" Command="{Binding ConvertTextCommand}"/>
@@ -16,7 +16,7 @@
         <Label Foreground="Blue" Margin="5,5,5,0">Text To Convert</Label>
         <TextBox Text="{Binding SomeText, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
         <Label Foreground="Blue" Margin="5,5,5,0">History</Label>
-        <ListBox ItemsSource="{Binding History}" Height="200" Margin="5"/>
+        <ListBox ItemsSource="{Binding ObservableProperty_History}" Height="200" Margin="5"/>
         <Button Command="{Binding ConvertTextCommand}" Margin="5">Convert</Button>
     </StackPanel>
     

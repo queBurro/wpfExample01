@@ -9,7 +9,7 @@
         SizeToContent="WidthAndHeight">
     
     <Window.DataContext>
-        <ViewModel:Presenter/>
+        <ViewModel:VmPresenter/>
     </Window.DataContext>
     
     <View:ConverterControl/>

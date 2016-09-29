@@ -6,23 +6,23 @@ using MinimalMVVM.Model;
 
 namespace MinimalMVVM.ViewModel
 {
-    public class Presenter : ObservableObject
+    public class VmPresenter : ObservableObject //inherits from ObservableObject so that we've got an implementation of RaisePropertyChangedEvent. 
     {
         private readonly TextConverter _textConverter = new TextConverter(s => s.ToUpper());
         private string _someText;
-        private readonly ObservableCollection<string> _history = new ObservableCollection<string>();
+        private readonly ObservableCollection<string> _history = new ObservableCollection<string>(); //field
 
-        public string SomeText
+        public string SomeText //public property which is bound to- get and settable
         {
             get { return _someText; }
             set
             {
                 _someText = value;
-                RaisePropertyChangedEvent("SomeText");
+                RaisePropertyChangedEvent("SomeText");//it's been changed so alw
             }
         }
 
-        public IEnumerable<string> History
+        public IEnumerable<string> ObservableProperty_History //property - public/get-only, can't bind to fields?
         {
             get { return _history; }
         }

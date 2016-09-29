@@ -65,7 +65,7 @@
     <Compile Include="Model\TextConverter.cs" />
     <Compile Include="ViewModel\DelegateCommand.cs" />
     <Compile Include="ViewModel\ObservableObject.cs" />
-    <Compile Include="ViewModel\Presenter.cs" />
+    <Compile Include="ViewModel\VmPresenter.cs" />
     <Compile Include="View\ConverterControl.xaml.cs">
       <DependentUpon>ConverterControl.xaml</DependentUpon>
     </Compile>
