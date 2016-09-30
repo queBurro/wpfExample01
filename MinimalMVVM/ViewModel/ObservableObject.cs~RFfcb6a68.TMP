@@ -6,7 +6,7 @@ namespace MinimalMVVM.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected void OnPropertyChanged(string propertyName)
+        protected void RaisePropertyChangedEvent(string propertyName)
         {
             var handler = PropertyChanged;
             if (handler != null)

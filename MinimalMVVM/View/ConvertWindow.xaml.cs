@@ -5,6 +5,7 @@ namespace MinimalMVVM.View
         public ConvertWindow()
         {
             InitializeComponent();
+            //DataContext = ViewModel.GetVM();
         }
     }
 }
